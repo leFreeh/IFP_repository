@@ -1,0 +1,55 @@
+---
+import { Alert, Carousel } from 'webcoreui/astro'
+import Layout from '../components/Layout.astro'
+---
+
+<Layout>
+    <Alert theme="info">Webcore is ready</Alert>
+    <Carousel items={3}>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+</Carousel>
+
+<Carousel items={6}
+    subText="Slide {0} of {1}"
+    effect="saturate"
+    pagination={{ type: 'dots' }}
+    scrollSnap={true}>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+    <li><img src="https://webcoreui.dev/img/placeholder1.png" /></li>
+</Carousel>
+</Layout>
+
+<style>
+
+    li {
+    position: relative;
+    overflow: hidden;
+
+    &[data-active] span {
+        transform: translateY(0);
+    }
+
+    img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    span {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2px 10px;
+        transform: translateY(100%);
+        background: rgba(0, 0, 0, 0.75);
+    }
+}
+</style>
