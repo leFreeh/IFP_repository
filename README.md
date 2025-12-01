@@ -1,5 +1,5 @@
-# Welcome to GitHub Desktop!
+# Tema 6 - Modelos de inteligencia artificial
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+He decidio aquetar una web rápida para este poyecto del curso.
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+No se si sea lo más util pero habia que hacer una presentación y no queria hacer una infografia o hacer un documento.
