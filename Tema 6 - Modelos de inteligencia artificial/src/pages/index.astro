@@ -1,8 +1,6 @@
 ---
 import { type ButtonProps, Icon, type PaginationProps } from 'webcoreui/astro'
 
-import logo from '@img/logo.svg?raw'
-
 import ProductPage from '@templates/ProductPage/ProductPage.astro'
 
 // Your layout, including menu and footer
@@ -14,17 +12,11 @@ const layout = {
         faviconUrl: '/img/favicon.ico'
     },
     menu: {
-        logo: {
-            html: logo
-        },
         items: [
             { name: 'Latest', href: '#' }
         ]
     },
     footer: {
-        logo: {
-            html: logo
-        },
         columns: [
             {
                 title: 'Sitemap',
@@ -71,51 +63,14 @@ const recommended = {
             text: 'You can also pass <b>HTML</b> tags to your recommended cards.'
         }))
 }
-
-// Your CTA buttons
-const buttons = [
-    {
-        text: 'Get Started ->',
-        theme: 'success' as ButtonProps['theme'],
-        href: '#'
-    },
-    { text: 'Demo', theme: 'secondary' as ButtonProps['theme'] }
-]
-
-// List of features under the CTA buttons
-const features = [
-    'Easily configure your menu and footer',
-    'Add carousel for preview images',
-    'Define your main content the way you want',
-    'Customize your call to actions',
-    'List features',
-    'Add recommendations'
-].map(feature => ({
-    icon: 'circle-check',
-    color: 'var(--w-color-success)',
-    text: feature
-}))
 ---
 
 <ProductPage
     layout={layout}
     images={images}
     carousel={carousel}
-    buttons={buttons}
-    features={features}
     recommended={recommended}
 >
-    <a
-        slot="menu"
-        href="https://github.com/Frontendland/webcoreui"
-        target="_blank"
-        rel="noreferrer"
-    >
-        <Icon type="github" size={18} />
-    </a>
-
-    <a class="muted" href="#">{'<-'} Back to all products</a>
-
     <h1>Astro Product Page</h1>
     <h2 class="muted">Customizable and easy to setup template for your products</h2>
 
