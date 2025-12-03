@@ -1,12 +1,13 @@
-import type { Snippet } from 'svelte'
 
 import type { BlogCardProps } from '@blocks/BlogCard/blogCard'
 import type { IconListProps } from '@blocks/IconList/iconList'
 import type { LayoutProps } from '@blocks/Layout/layout'
 import type { ButtonProps, CarouselProps, IconProps } from 'webcoreui/astro'
+import type { HeroProps } from "@blocks/Hero/Hero.astro";
 
 export type ProductPageProps = {
     layout: LayoutProps
+    hero?: HeroProps;
     images?: {
         src: string
         alt: string
@@ -25,12 +26,5 @@ export type ProductPageProps = {
         items: BlogCardProps[]
     }
     [key: string]: any
+    
 }
-
-export type SvelteProductPageProps = {
-    children?: Snippet
-} & ProductPageProps
-
-export type ReactProductPageProps = {
-    children?: React.ReactNode
-} & ProductPageProps

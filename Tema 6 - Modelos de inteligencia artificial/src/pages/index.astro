@@ -22,12 +22,25 @@ const layout = {
                 title: 'Sitemap',
                 items: [
                     { href: '/', name: 'Home' },
-                    { href: 'https://webcoreui.dev/templates', name: 'Templates' }
+                    { href: '/', name: 'Templates' }
                 ]
             }
         ],
-        subText: `© ${new Date().getFullYear()} Webcore. All Rights Reserved.`
     }
+}
+
+// Your Hero configuration
+const hero = {
+    heading: 'Welcome to Our Product',
+    subHeading: 'The best solution for your needs',
+    buttons: [
+        {
+            text: 'Start Free Trial',
+            href: '/signup',
+            variant: 'primary' as const
+        }
+    ],
+    image: null
 }
 
 // Your carousel images
@@ -70,6 +83,7 @@ const recommended = {
     images={images}
     carousel={carousel}
     recommended={recommended}
+    hero={hero}
 >
     <h1>Astro Product Page</h1>
     <h2 class="muted">Customizable and easy to setup template for your products</h2>

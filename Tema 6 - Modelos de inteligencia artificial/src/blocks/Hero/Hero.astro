@@ -6,8 +6,6 @@ import {
     Icon
 } from 'webcoreui/astro'
 
-import AvatarWithRating from '@blocks/AvatarWithRating/AvatarWithRating.astro'
-
 import type { HeroProps } from './hero'
 import styles from './hero.module.scss'
 
@@ -59,13 +57,6 @@ const classes = [
                     </Button>
                 ))}
             </div>
-        )}
-
-        {avatarWithRating && (
-            <AvatarWithRating
-                {...avatarWithRating}
-                className={styles.avatar}
-            />
         )}
     </ConditionalWrapper>
     {image?.src && (
