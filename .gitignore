@@ -1,0 +1,19 @@
+# Node
+"Tema 6 - Modelos de inteligencia artificial/node_modules/"
+
+# Build
+"Tema 6 - Modelos de inteligencia artificial/dist/"
+"Tema 6 - Modelos de inteligencia artificial/build/"
+
+# Vite / Astro / cache
+"Tema 6 - Modelos de inteligencia artificial/.vite/"
+"Tema 6 - Modelos de inteligencia artificial/.cache/"
+
+# Env
+"Tema 6 - Modelos de inteligencia artificial/.env"
+"Tema 6 - Modelos de inteligencia artificial/.env.local"
+
+# IDE
+"Tema 6 - Modelos de inteligencia artificial/.vscode/"
+"Tema 6 - Modelos de inteligencia artificial/.idea/"
+"Tema 6 - Modelos de inteligencia artificial/.DS_Store"
