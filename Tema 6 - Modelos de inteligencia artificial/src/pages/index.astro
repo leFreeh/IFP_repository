@@ -1,176 +1,515 @@
 ---
-import { type ButtonProps, Icon, type PaginationProps } from 'webcoreui/astro'
+import { type ButtonProps, Icon, type PaginationProps } from "webcoreui/astro";
 
-import ProductPage from '@templates/ProductPage/ProductPage.astro'
+import ProductPage from "@templates/ProductPage/ProductPage.astro";
 
 // Your layout, including menu and footer
 const layout = {
-    seo: {
-        title: 'Product Page Template for Astro - Webcore',
-        url: 'https://webcoreui.dev/previews/product-page',
-        description: 'A customizable and easy to use template for products.',
-        faviconUrl: '/img/favicon.ico'
-    },
-    menu: {
-        items: [
-            { name: 'Latest', href: '#' }
-        ]
-    },
-    footer: {
-        columns: [
-            {
-                title: 'Sitemap',
-                items: [
-                    { href: '/', name: 'Home' },
-                    { href: '/', name: 'Templates' }
-                ]
-            }
-        ],
-    }
-}
+	seo: {
+		title: "Product Page Template for Astro - Webcore",
+		url: "https://webcoreui.dev/previews/product-page",
+		description: "A customizable and easy to use template for products.",
+		faviconUrl: "/img/favicon.icon",
+	},
+	menu: {
+		items: [{ name: "Examinar directrices éticas de la IA", href: "#seccion_1" }],
+	},
+	footer: {
+		columns: [
+			{
+				title: "Sitemap",
+				items: [
+					{ href: "/", name: "Home" },
+					{ href: "/", name: "Templates" },
+				],
+			},
+		],
+	},
+};
 
 // Your Hero configuration
 const hero = {
-    heading: 'Welcome to Our Product',
-    subHeading: 'The best solution for your needs',
-    image: {
-        src: '/img/banner.png',
-        alt: 'banner',
-        width: 5000,
-        height: 250,
-    }
-}
-
-// Your carousel images
-const images = Array
-    .from({ length: 3 }, (_, i) => i + 1)
-    .map(i => ({
-        src: `/img/placeholder-hd${i}.png`,
-        alt: 'img',
-        width: 1200,
-        height: 250
-    }))
-
-// Your carousel configuration
-const carousel = {
-    pagination: {
-        type: 'dots' as PaginationProps['type']
-    }
-}
-
-// Your list of recommended products
-const recommended = {
-    items: Array
-        .from({ length: 3 }, (_, i) => i + 5)
-        .map(i => ({
-            href: '#',
-            img: {
-                src: `/img/placeholder${i}.png`,
-                alt: 'img',
-                width: 500,
-                height: 250
-            },
-            title: `Recommended Card #${i - 4}`,
-            text: 'You can also pass <b>HTML</b> tags to your recommended cards.'
-        }))
-}
+	heading: "Inteligencia Artificial y Privacidad",
+	subHeading:
+		"Un Análisis del Impacto Social y las Diferencias entre Ética y Regulación Legal (Ley de IA de la UE)",
+	image: {
+		src: "/img/banner.png",
+		alt: "banner",
+		width: 500,
+		height: 250,
+	},
+};
 ---
 
-<ProductPage
-    layout={layout}
-    images={images}
-    carousel={carousel}
-    recommended={recommended}
-    hero={hero}
->
-    <h1>Astro Product Page</h1>
-    <h2 class="muted">Customizable and easy to setup template for your products</h2>
+<ProductPage layout={layout} hero={hero}>
+	<hr class="separador" style="opacity: 0;" />
+	<h1 class="seccion" id="seccion_1">Examinar directrices éticas de la IA</h1>
+	<h2 class="muted">Directrices éticas de IA</h2>
 
-    <p>
-        This template is designed to help you create professional product pages with minimal effort while offering full customization to meet your needs. To ensure a seamless user experience, the layout is fully-responsive and optimized for all devices.
-    </p>
+	<p>
+		Desarrollar, desplegar y utilizar los sistemas de IA respetando los
+		principios éticos de: respeto de la autonomía humana, prevención del
+		daño, equidad y explicabilidad. Reconocer y abordar las tensiones que
+		pueden surgir entre estos principios.
+	</p>
 
-    <hr />
+	<hr />
 
-    <h3>Key Features</h3>
-    <ul>
-        <li>
-            <b>Menu and Footer Configuration:</b>
-            Quickly set up and customize your navigation and footer to match your site’s structure and style.
-        </li>
-        <li>
-            <b>Image Carousel:</b>
-            Showcase product images with an interactive carousel for a more engaging user experience.
-        </li>
-        <li>
-            <b>Flexible Content Layout:</b>
-            Define your main content the way you want—whether it’s a detailed description, video, or anything else that suits your product.
-        </li>
-        <li>
-            <b>Customizable Call-to-Actions (CTAs):</b>
-            Design CTAs that fit your brand and guide users toward the actions that matter most.
-        </li>
-        <li>
-            <b>Feature Listing:</b>
-            Highlight product features in a clear, organized way to inform and attract customers.
-        </li>
-        <li>
-            <b>Recommendation Section:</b>
-            Add recommendations or related products to enhance discoverability and boost engagement.
-        </li>
-    </ul>
+	<h3>Principios Éticos Fundamentales de la UE(AI HLEG)</h3>
+	<i class="muted">
+		High-Level Expert Group on Artificial Intelligence (AI HLEG). “Ethics
+		Guidelines for rustworthy I.”European Commission, 2019.
+	</i>
+	<ul>
+		<li>
+			<b>Respeto de la autonomía humana:</b>
+			Los sistemas de IA deben diseñarse para empoderar a los humanos y permitirles
+			tomar decisiones informadas, sin ser manipulados, forzados o indebidamente
+			influenciados. Esto implica mantener un control humano significativo
+			sobre los resultados y las decisiones críticas.
+		</li>
+		<li>
+			<b>Prevención del daño(Non-Maleficencia):</b>
+			La IA no debe causar daño físico, mental, financiero o social. Esto abarca
+			la seguridad técnica (evitar fallos o bugs maliciosos) y la prevención
+			de impactos sociales negativos, como el daño ambiental o el socavamiento
+			de la democracia.
+		</li>
+		<li>
+			<b>Equidad(Fairness):</b>
+			La IA debe garantizar una igualdad de trato y evitar el sesgo algorítmico.
+			Esto significa que los sistemas no deben discriminar a individuos o grupos
+			por su origen étnico, género, edad, orientación sexual, o estatus socioeconómico,
+			y que las oportunidades y recursos no se distribuyan injustamente.
+		</li>
+		<li>
+			<b>Explicabilidad(Explicability/Accountability):</b>
+			Design CTAs that fit your brand and guide users toward the actions that
+			matter most.
+		</li>
+	</ul>
 
-        <hr />
-    <hr />
+	<hr />
 
+	<h3>Requisitos para una IA Confiable (Directrices prácticas de la UE)</h3>
+	<i class="muted">
+		European Commission – AI HLEG (2019). "Ethics Guidelines for Trustworthy
+		AI".
+	</i>
+	<p>
+		Para operacionalizar estos principios, el AI HLEG estableció siete
+		requisitos clave que deben guiar la implementación de la IA. Estos
+		requisitos son el puente entre el ideal ético y la futura regulación
+		legal
+	</p>
+	<ul>
+		<li>
+			<b>Supervisión Humana:</b>
+			Mecanismos que garanticen que un humano puede intervenir y anular una
+			decisión del sistema. Es crucial para sistemas de alto riesgo.
+		</li>
+		<li>
+			<b>Robustez y Seguridad Técnica:</b>
+			La IA debe ser fiable, precisa y resiliente a errores, hackeos y ataques
+			maliciosos (adversarial attacks).
+		</li>
+		<li>
+			<b>Privacidad y Gobernanza de Datos:</b>
+			La IA debe cumplir con el RGPD; esto incluye calidad, integridad, acceso,
+			minimización de datos y mecanismos para proteger la privacidad.
+		</li>
+		<li>
+			<b>Transparencia:</b>
+			La trazabilidad de los datos, la documentación de diseño del modelo y
+			la comunicación clara de las capacidades y limitaciones de la IA.
+		</li>
+		<li>
+			<b>Diversidad, No Discriminación y Equidad:</b>
+			Evitar sesgos en los datos de entrenamiento para garantizar la justicia
+			en los resultados y el diseño inclusivo.
+		</li>
+		<li>
+			<b>Bienestar Social y Ambiental:</b>
+			Considerar el impacto energético de la IA y asegurar que su uso contribuye
+			a la sostenibilidad, la democracia y la justicia social.
+		</li>
+		<li>
+			<b>Responsabilidad (Accountability):</b>
+			Establecer la responsabilidad de los desarrolladores, usuarios y proveedores
+			en caso de daños, facilitando la auditoría y la reparación.
+		</li>
+	</ul>
 
-    <h1>Astro Product Page</h1>
-    <h2 class="muted">Customizable and easy to setup template for your products</h2>
+	<hr class="separador" />
 
-    <p>
-        This template is designed to help you create professional product pages with minimal effort while offering full customization to meet your needs. To ensure a seamless user experience, the layout is fully-responsive and optimized for all devices.
-    </p>
+	<h1 class="seccion" id="seccion_2">Normativas legales vigentes de la UE y España</h1>
 
-    <hr />
+	<hr />
 
-    <h3>Key Features</h3>
-    <ul>
-        <li>
-            <b>Menu and Footer Configuration:</b>
-            Quickly set up and customize your navigation and footer to match your site’s structure and style.
-        </li>
-        <li>
-            <b>Image Carousel:</b>
-            Showcase product images with an interactive carousel for a more engaging user experience.
-        </li>
-        <li>
-            <b>Flexible Content Layout:</b>
-            Define your main content the way you want—whether it’s a detailed description, video, or anything else that suits your product.
-        </li>
-        <li>
-            <b>Customizable Call-to-Actions (CTAs):</b>
-            Design CTAs that fit your brand and guide users toward the actions that matter most.
-        </li>
-        <li>
-            <b>Feature Listing:</b>
-            Highlight product features in a clear, organized way to inform and attract customers.
-        </li>
-        <li>
-            <b>Recommendation Section:</b>
-            Add recommendations or related products to enhance discoverability and boost engagement.
-        </li>
-    </ul>
+	<h3>Normativa vigente UE</h3>
+	<h4>Ley de IA de la UE</h4>
+	<p>
+		Parte de la estrategia digital para garantizar mejores condiciones de
+		desarrollo y de la tecnología innovadora. Primera norma jurídica, en
+		abril del 2021 propuso la primera ley que clasifica los sistemas de
+		inteligencia artificial en función del riesgo que puede generar. La
+		prioridad del Parlamento en la legislación sobre IA, es garantizar que
+		sean seguros, transparentes, trazables, no discriminatorios y
+		respetuosos con el medio ambiente. Establecer una definición uniforme y
+		tecnológicamente neutra de la IA para aplicarse a futuros sistemas.
+	</p>
+
+	<h4>Normas diferentes para niveles diferentes de riesgos</h4>
+	<p>
+		Esta normativa establece diferentes obligaciones para los proveedores y
+		usuarios en función del nivel de riesgo de la IA.
+	</p>
+	<ul>
+		<li>
+			<b>Riesgo Inaceptable, prohibidos por la UE:</b><br />
+			<i class="muted"
+				>Sistemas considerados una amenaza clara a los derechos
+				fundamentales y los valores de la UE.</i
+			>
+			<ul>
+				<li>
+					Manipulación cognitiva del comportamiento de un grupo de
+					personas o vulnerables
+				</li>
+				<li>
+					Clasificación de personas según su comportamiento, estatus
+					socioeconómico o características personales.
+				</li>
+				<li>
+					Sistemas de identificación biométrica en tiempo real y a
+					distancia.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<b>Alto riesgo:</b><br />
+			<i class="muted"
+				>Sistemas que impactan críticamente la vida y los derechos de
+				las personas.</i
+			>
+			<ul>
+				<li>
+					Sistemas de IA que estén sujetos a la legislación de la UE
+					sobre seguridad de productos. Juguetes, aviación,
+					automoviles, dispositivos médicos y ascensores.
+				</li>
+				<li>
+					Sistemas de IA pertenecientes a estos ámbitos:
+					<ul>
+						<li>
+							Identificación biométrica y categorización físicas
+						</li>
+						<li>
+							Gestión y explotación de infraestructuras críticas
+						</li>
+						<li>Educación y formación profesional</li>
+						<li>
+							Empleo, gestión de trabajadores y acceso al
+							autoempleo
+						</li>
+						<li>
+							Acceso y disfrute de servicios privados esenciales y
+							servicios y presentaciones públicas
+						</li>
+						<li>Aplicación de la ley</li>
+						<li>
+							Gestión de migración, el asilo y el control de
+							fronteras
+						</li>
+						<li>
+							Asistencia en la interpretación jurídica y
+							aplicación de la ley
+						</li>
+					</ul>
+				</li>
+				<li>
+					Estos sistemas serán evaluados antes de su comercialización
+					y a lo largo de su ciclo de vida.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<b>Riesgo Limitado</b><br />
+			<i class="muted">Obligaciones de Transparencia.</i>
+			<ul>
+				<li>
+					Chatbots o sistemas que interactúan con personas (deben
+					revelar que son IA) y sistemas de emociones o biometría.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<b>Riesgo Mínimo o Nulo</b><br />
+			<i class="muted">Sin Restricciones.</i>
+			<ul>
+				<li>
+					La mayoría de los sistemas, como los videojuegos o los
+					filtros de spam.
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h4>Requisitos de transparencia</h4>
+	<p>
+		La IA generativa como ChatGPT, no se considera de alto riesgo, pero
+		tendrá que cumplir requisitos de transparencia y con la legislación de
+		la UE en materia de derechos de autor:
+	</p>
+	<ul>
+		<li>Revelar que el contenido ha sido generado por IA</li>
+		<li>Diseñar el modelo para evitar que genere contenidos ilegales</li>
+		<li>
+			Publicar resúmenes de los datos protegidos por derechos de autor
+			utilizados por el entrenamiento
+		</li>
+	</ul>
+	<p>
+		Los sistemas de IA que cuente con un alto impacto y que pueda ser un
+		riesgo sistémico, tendrán que someterse a evaluaciones exhaustivas e
+		informar a la comisión de cualquier incidente.
+	</p>
+
+	<h4>Fomento de la innovación de la IA y apoyo a las start-ups en Europa</h4>
+	<p>
+		Exige que las autoridades nacionales proporcionen a las empresas un
+		entorno de pruebas para la IA que simula condiciones cercanas al mundo
+		real.<br />
+		La legislación apoya la innovación y la creación de empresas de IA en Europa,
+		permitiendo a las empresas desarrollar y probar modelos de IA de uso general.
+	</p>
+
+	<h4>Requisitos Específicos para la IA Generativa</h4>
+	<p class="muted">Modelos Fundacionales</p>
+	<p>
+		Para modelos de IA de uso general <i>(General Purpose AI - GPAI)</i> como
+		GPT-4 o LLaMA, se añaden requisitos de transparencia reforzada e implicaciones
+		de derechos de autor:
+	</p>
+	<ul>
+		<li>
+			<b>Divulgación Obligatoria:</b>
+			Los proveedores deben indicar claramente que el contenido (texto, imagen,
+			audio) fue generado o manipulado por una IA.
+		</li>
+		<li>
+			<b>Resúmenes de Datos:</b>
+			Deben publicar un resumen detallado de los datos protegidos por derechos
+			de autor utilizados en el entrenamiento.
+		</li>
+		<li>
+			<b>Mitigación de Contenido Ilegal:</b>
+			Se requieren medidas para evitar que el modelo genere contenido que infrinja
+			la ley fundamental.
+		</li>
+	</ul>
+
+	<hr />
+
+	<h3>Aplicación en UE</h3>
+	<p>
+		El Parlamento creó un grupo de trabajo para supervisar la aplicación y
+		el cumplimiento de la Ley de IA. Los eurodiputados quieren asegurarse de
+		que las normas sobre IA adoptadas contribuyan al desarrollo del sector
+		digital en Europa.
+	</p>
+
+	<hr />
+
+	<h3>Normativa vigente en España</h3>
+	<p class="muted">
+		Aquí tienes un resumen del Real Decreto 729/2023, de 22 de agosto -
+		aprueba el Estatuto de la Agencia Española de Supervisión de
+		Inteligencia Artificial(AESIA)
+	</p>
+
+	<h4>Que establece el decreto</h4>
+	<p>
+		Crea formalmente la AESIA como agencia estatal con personalidad jurídica
+		pública, patrimonio propio y autonomía de gestión.<br />
+		El organismo se suma al marco normativo vigente en España: su creación estaba
+		prevista en leyes anteriores como la del presupuesto de 2022 y la ley para
+		fomento de empresas emergentes.<br />
+		La fundación AESIA responde también a obligaciones derivadas de la futura
+		normativa europea sobre IA, es decir España debe de designar una “autoridad
+		nacional de supervisión”.
+	</p>
+
+	<h4>Propósito y funciones</h4>
+	<p>AESIA tiene múltiples roles:</p>
+	<ul>
+		<li>
+			<b>Supervisión y control:</b>
+			vigilar que la IA que oepre en España cumpla con la normativa nacional
+			y europea.
+		</li>
+		<li>
+			<b>Asesoramiento y regulación:</b>
+			ofrecer orientación para poder implementar la IA de forma adecuada y
+			conforme a la ley.
+		</li>
+		<li>
+			<b>Concienciación, formación y difusión:</b>
+			promover una adopción responsable, ética y sostenible de la IA, fomentar
+			la investigación, la innovación y buenas prácticas.
+		</li>
+		<li>
+			<b>Impulsar la innovación con responsabilidad:</b>
+			garantizar un uso de la IA con parámetros de justicia, igualdad y sostenibilidad.
+		</li>
+	</ul>
+
+	<h4>Situación y vigencia</h4>
+	<p>
+		El decreto se publicó en el BOE el 2 de septiembre de 2023 y entró en
+		vigor al día siguiente. Con ello España es el primer país en tener nua
+		agencia dedicada exclusivamente a la supervisión de la IA en UE.
+	</p>
+
+	<h4>Importancia e Implicaciones</h4>
+	<p>
+		Con esto España se pone a la vanguardia en gobernanza de IA ya que puede
+		anticipar futura regulación europea. La existencia de AESIA proporciona
+		seguridad juridica, transparencia y supervision sobre los sistmas de IA.
+		También abre la puerta a un mercado regulado y responsable.
+	</p>
+
+	<hr />
+
+	<h3>Impacto de la implementación de la “Ley IA de la UE”</h3>
+	<p>
+		Crea un marco ambicioso para equilibrar seguridad y derechos con la
+		innovación, a corto plazo aumentará costes y obligaciones pero a
+		medio-largo plazo puede favorecer confianzas. Tendrá un impacto
+		transformador, estableciendo el primer marco legal horizontal y basado
+		en riesgos para el desarrollo y uso de la IA a nivel mundial. Sus
+		efectos principales se centrarán en la confianza del consumidor, el
+		cumplimiento normativo empresarial y el fomento de un desarrollo de la
+		IA centrado en las personas
+	</p>
+
+	<hr class="separador" />
+
+	<h1 class="seccion" id="seccion_3">Ley de protección de datos</h1>
+	<p>
+		La legislación española sobre protección de datos se basa en el
+		Reglamento General de Protección de Datos (RGPD) de la UE y la Ley
+		Orgánica 3/2018, de Protección de Datos Personales y garantía de los
+		derechos digitales (LOPDGDD). Esta normativa establece el marco legal
+		para tratar los datos personales en España y estableciendo obligaciones
+		para las empresas.
+	</p>
+
+	<ul>
+		<li>
+			<b>Consentimiento:</b> para el tratamiento de datos personales de manera
+			clara y no implícita.
+		</li>
+		<li>
+			<b>Menores de edad:</b> si tiene 14 o menos no puede dar consentimiento
+			para el uso de sus datos.
+		</li>
+		<li>
+			<b>Información y transparencia:</b> quien se encargue de tratar los datos
+			debe de informar de forma clara y detallada cómo se van a utilizar.
+		</li>
+		<li>
+			<b>Derechos del interesado:</b> los ciudadanos tienen derecho a manipular
+			sus datos personales, también tienen derecho a oponerse al tratamiento
+			y a no ser objeto de decisiones automatizadas.
+		</li>
+	</ul>
+
+	<hr class="separador" />
+
+	<h1 class="seccion" id="seccion_4">Como puede ser incompatible con la IA</h1>
+	<p>
+		Las obligaciones normativas contrastan con la naturaleza de las técnicas
+		de muchas IA
+	</p>
+	<ul>
+		<li>
+			<b>Reutilización de datos:</b>los modelos de IA funcionan mejor con
+			grandes volúmenes de datos de orígenes diversos, pero la limitación
+			implica que no siempre sea legal utilizarlo.
+		</li>
+		<li>
+			<b>Finalidad imprecisa / Evolución continua:</b>la IA suele
+			evolucionar, adaptarse y mejorarse. No se puede anticipar todas las
+			finalidades al recolectar datos, eso va en contra de la finalidad
+			clara.
+		</li>
+		<li>
+			<b>Decisiones automatizadas y perfiladas:</b>las decisiones sobre
+			personas tiene efectos relevantes, el usuario tiene derechos y eso
+			limita el tipo de IA que se puede usar y cómo.
+		</li>
+		<li>
+			<b>Datos sensibles / categorías especiales:</b>algunos usos de IA
+			podrían beneficiarse de datos como salud, origen, etc… Pero el GDPR
+			restringe fuertemente ese tipo de datos y exige causas muy concretas
+			para su tratamiento.
+		</li>
+		<li>
+			<b>Anonimato y “desidentificación” incierta:</b>un modelo de IA o un
+			dataset deben estar verdaderamente anonimizados los datos. Pero con
+			técnicas avanzadas o combinaciones de datos, puede ser muy difícil
+			garantizar que no haya riesgo de reidentificación.
+		</li>
+		<li>
+			<b>Cara de cumplimiento y documentación:</b>la necesidad de DPIA,
+			registros, auditorías, trazabilidad, transparencia. Supone un
+			esfuerzo, recursos y puede hacer inviable el uso de ciertos modelos
+			de IA.
+		</li>
+	</ul>
+	<p>
+		Por ejemplo ciertos sistemas de IA para que evalúen e identifiquen
+		riesgos de discriminación, pueden necesitar datos sensibles pero eso
+		choca con el GDPR sobre categorías especiales. Esto puede hacer que
+		desarrollar IA de forma genérica, flexible y evolutiva sea difícil bajo
+		estructuras estrictas de protección de datos. <br />
+		Las fuertes condiciones limitan el uso libre, general o indiscriminado al
+		implicar datos sensibles, decisiones sobre personas o datos sensibles, requieren
+		un diseño de IA consciente de privacidad.<br />
+		Para ello falta planificación deliberada, cumplimiento normativo, controles
+		técnicos y organización interna que priorice el derecho a la privacidad.
+	</p>
 </ProductPage>
 
 <style lang="scss">
-    @use 'webcoreui/config' as *;
+	@use "webcoreui/config" as *;
 
-    h1 {
-        @include spacing(mt-default);
-    }
+	h1 {
+		@include spacing(mt-default);
+	}
 
-    h2 {
-        @include typography(lg, 400, regular);
-        @include spacing(m0);
-    }
+	h2 {
+		@include typography(lg, 400, regular);
+		@include spacing(m0);
+	}
+
+	.separador {
+		margin: 3.5% 0;
+		padding: 10px;
+		border: 2px solid white;
+		border-radius: 5px;
+	}
+
+	hr {
+		border: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.seccion {
+		scroll-margin-top: 80px; /* cambia 80px por la altura de tu navbar */
+	}
 </style>
