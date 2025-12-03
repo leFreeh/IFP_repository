@@ -3,7 +3,7 @@ import type { BlogCardProps } from '@blocks/BlogCard/blogCard'
 import type { IconListProps } from '@blocks/IconList/iconList'
 import type { LayoutProps } from '@blocks/Layout/layout'
 import type { ButtonProps, CarouselProps, IconProps } from 'webcoreui/astro'
-import type { HeroProps } from "@blocks/Hero/Hero.astro";
+import type { HeroProps } from "@blocks/Hero/hero";
 
 export type ProductPageProps = {
     layout: LayoutProps

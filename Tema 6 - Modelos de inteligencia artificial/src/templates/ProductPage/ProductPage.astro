@@ -1,7 +1,6 @@
 ---
 import type { ProductPageProps } from "./productPage";
 
-import BlogCard from "@blocks/BlogCard/BlogCard.astro";
 import Layout from "@blocks/Layout/Layout.astro";
 import Hero from "@blocks/Hero/Hero.astro";
 
@@ -11,8 +10,16 @@ import { Carousel } from "webcoreui/astro";
 
 interface Props extends ProductPageProps {}
 
-const { layout, images, carousel, buttons, features, recommended, hero, ...rest } =
-	Astro.props;
+const {
+	layout,
+	images,
+	carousel,
+	buttons,
+	features,
+	recommended,
+	hero,
+	...rest
+} = Astro.props;
 ---
 
 <Layout {...layout} {...rest} className={styles.main}>
@@ -24,11 +31,13 @@ const { layout, images, carousel, buttons, features, recommended, hero, ...rest 
 		)
 	}
 
+	{hero && <Hero {...hero} />}
+
 	{
 		images?.length && (
 			<Carousel
 				{...carousel}
-				slot="atf"
+				slot="above-footer"
 				items={images.length}
 				className={styles.container}
 				wrapperClassName={styles.carousel}
@@ -48,20 +57,6 @@ const { layout, images, carousel, buttons, features, recommended, hero, ...rest 
 		)
 	}
 
-	{hero && <Hero {...hero} />}
-
 	<slot />
 
-	{
-		!!recommended?.items?.length && (
-			<section slot="above-footer" class="container">
-				<h2>{recommended.title || "Recommended"}</h2>
-				<div class="grid sm-3">
-					{recommended.items.map((item) => (
-						<BlogCard {...item} />
-					))}
-				</div>
-			</section>
-		)
-	}
 </Layout>
