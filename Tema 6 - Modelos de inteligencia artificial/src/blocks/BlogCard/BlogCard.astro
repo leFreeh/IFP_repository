@@ -21,9 +21,6 @@ const { href, target, img, title, text, secondary, className, ...rest } =
         <img
             src={img.src}
             alt={img.alt}
-            width={img.width}
-            height={img.height}
-            loading={img.lazy ? "lazy" : undefined}
         />
         <ConditionalWrapper condition={!!text}>
             <div slot="wrapper" class="cont">children</div>
