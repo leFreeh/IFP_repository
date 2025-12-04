@@ -1,6 +1,6 @@
 # Repositorios del curso
 
-No sé por que he decidido montar webs para el curso 😂
+No sé por que he decidido montar webs para el curso 😂 <br>
 Pero ahi voy
 
 ## Tema 6 - Modelos de inteligencia artificial
