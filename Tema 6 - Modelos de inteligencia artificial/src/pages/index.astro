@@ -1,7 +1,9 @@
 ---
-import { type ButtonProps, Icon, type PaginationProps } from "webcoreui/astro";
-
 import ProductPage from "@templates/ProductPage/ProductPage.astro";
+import { Tabs } from "webcoreui/astro";
+import BlogCard from "@blocks/BlogCard/BlogCard.astro";
+
+import logo from "../../public/logo_n.svg?raw";
 
 // Your layout, including menu and footer
 const layout = {
@@ -12,7 +14,27 @@ const layout = {
 		faviconUrl: "/img/favicon.icon",
 	},
 	menu: {
-		items: [{ name: "Examinar directrices éticas de la IA", href: "#seccion_1" }],
+		logo: {
+			html: logo,
+		},
+		items: [
+			{
+				name: "Examinar directrices éticas de la IA",
+				href: "#seccion_1",
+			},
+			{
+				name: "Normativas legales vigentes de la UE y España",
+				href: "#seccion_2",
+			},
+			{
+				name: "Ley de protección de datos",
+				href: "#seccion_3",
+			},
+			{
+				name: "Como puede ser incompatible con la IA",
+				href: "#seccion_4",
+			},
+		],
 	},
 	footer: {
 		columns: [
@@ -27,7 +49,7 @@ const layout = {
 	},
 };
 
-// Your Hero configuration
+// Hero configuration
 const hero = {
 	heading: "Inteligencia Artificial y Privacidad",
 	subHeading:
@@ -39,6 +61,27 @@ const hero = {
 		height: 250,
 	},
 };
+
+// Tabs configuration
+const items = [
+	{
+		label: "Meta",
+		value: "Case_1",
+		active: true,
+	},
+	{
+		label: "Samsung",
+		value: "Case_2",
+	},
+	{
+		label: "Tik Tok",
+		value: "Case_3",
+	},
+	{
+		label: "Zoom",
+		value: "Case_4",
+	},
+];
 ---
 
 <ProductPage layout={layout} hero={hero}>
@@ -142,7 +185,9 @@ const hero = {
 
 	<hr class="separador" />
 
-	<h1 class="seccion" id="seccion_2">Normativas legales vigentes de la UE y España</h1>
+	<h1 class="seccion" id="seccion_2">
+		Normativas legales vigentes de la UE y España
+	</h1>
 
 	<hr />
 
@@ -427,7 +472,9 @@ const hero = {
 
 	<hr class="separador" />
 
-	<h1 class="seccion" id="seccion_4">Como puede ser incompatible con la IA</h1>
+	<h1 class="seccion" id="seccion_4">
+		Como puede ser incompatible con la IA
+	</h1>
 	<p>
 		Las obligaciones normativas contrastan con la naturaleza de las técnicas
 		de muchas IA
@@ -480,6 +527,50 @@ const hero = {
 		Para ello falta planificación deliberada, cumplimiento normativo, controles
 		técnicos y organización interna que priorice el derecho a la privacidad.
 	</p>
+
+	<hr class="separador" />
+
+	<Tabs items={items}>
+		<div data-tab="Case_1" data-active="true">
+			<BlogCard
+				img={{
+					src: "../../public/img/Meta.png",
+					alt: "Blog featured img alt",
+				}}
+				title="Meta usando fotos y posts para entrenar IA"
+				text="Meta anunció que usaría publicaciones y fotos públicas para entrenar sus modelos de IA generativa, causando preocupación por la privacidad."
+			/>
+		</div>
+		<div data-tab="Case_2">
+			<BlogCard
+				img={{
+					src: "../../public/img/Samsung.png",
+					alt: "Blog featured img alt",
+				}}
+				title="Meta usando fotos y posts para entrenar IA"
+				text="Samsung prohibió el uso de ChatGPT internamente tras descubrir que empleados subieron información confidencial de la empresa para pedir ayuda técnica."
+			/>
+		</div>
+		<div data-tab="Case_3">
+			<BlogCard
+				img={{
+					src: "../../public/img/Tik Tok.png",
+					alt: "Blog featured img alt",
+				}}
+				title="Meta usando fotos y posts para entrenar IA"
+				text="TikTok actualizó sus políticas para incluir la recolección de datos biométricos como rostro y voz en varios países."
+			/></div>
+		<div data-tab="Case_4">
+			<BlogCard
+				img={{
+					src: "../../public/img/Zoom.png",
+					alt: "Blog featured img alt",
+				}}
+				title="Zoom entrenando IA con videollamadas"
+				text="Zoom fue criticado por permitir el uso de videollamadas de usuarios para entrenar modelos de IA sin dejarlo suficientemente claro en sus términos."
+			/>
+		</div>
+	</Tabs>
 </ProductPage>
 
 <style lang="scss">
