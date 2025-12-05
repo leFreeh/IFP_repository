@@ -8,6 +8,9 @@ Pero ahi voy
 He decidio maquetar una web rápida para este poyecto del curso.<br>
 He usado Astro como framework, ya que la idea era desplegar un web simple y estática. 
 No se si sea lo más util pero habia que hacer una presentación y no queria hacer una infografia o hacer un documento.
+<br>
+<br>
+<a href="https://ifp-repository-9bub.vercel.app/">Preview de la web<a/>
 
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
 ![SCSS](https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
